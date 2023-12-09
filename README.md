@@ -31,6 +31,18 @@ Nothing here
 | listAccounts            | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_getaccounts |
 | getAccount              | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_getaccount  |
 
+### Orders
+
+| API                     | DESCRIPTION |
+| :----                   | :---- |
+| createOrder             | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_postorder           |
+| cancelOrders            | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_cancelorders        |
+| editOrder               | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_editorder           |
+| editOrderPreview        | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_previeweditorder    |
+| listOrders              | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_gethistoricalorders |
+| listFills               | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_getfills            |
+| getOrder                | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_gethistoricalorder  |
+
 ### Products
 
 | API                     | DESCRIPTION |
@@ -42,21 +54,19 @@ Nothing here
 | getCandles              | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_getcandles      |
 | getTrades               | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_getmarkettrades |
 
-### Orders
-
-| API                     | DESCRIPTION |
-| :----                   | :---- |
-| createOrder             | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_postorder           |
-| cancelOrders            | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_cancelorders        |
-| listOrders              | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_gethistoricalorders |
-| listFills               | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_getfills            |
-| getOrder                | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_gethistoricalorder  |
-
 ### Fees
 
 | API                     | DESCRIPTION |
 | :----                   | :---- |
 | getTransactions         | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_gettransactionsummary |
+
+### Convert
+
+| API                     | DESCRIPTION |
+| :----                   | :---- |
+| createQuote             | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_createconvertquote |
+| commitConvert           | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_commitconverttrade |
+| getConvert              | https://docs.cloud.coinbase.com/advanced-trade-api/reference/retailbrokerageapi_commitconverttrade |
 
 ## __WEBSOCKET API__
 
