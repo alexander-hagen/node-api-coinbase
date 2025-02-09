@@ -1,0 +1,30 @@
+{
+  "name": "node-api-coinbase",
+  "version": "0.2.1",
+  "description": "Non-official implementation of Coinbase's Advanced Trade API's",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexander-hagen/node-api-coinbase.git"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "jsonwebtoken": "^9.0.2",
+    "ws": "^8.5.0"
+  },
+  "author": "Alexander Hagen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexander-hagen/node-api-coinbase/issues"
+  },
+  "homepage": "https://github.com/alexander-hagen/node-api-coinbase#readme",
+  "engines": {
+    "node": ">= 18.x.x"
+  }
+}
