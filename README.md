@@ -136,16 +136,19 @@ For support on using the API's or development issues, please refer to the offici
     secret: 'MY_API_SECRET'
   };
 
-  const tradingAPI=new coinbase.sockets.tradingApi(auth);
-  tradingAPI.setHandler('user.snapshot', (method,data,symbol,option) => { updateOrder(method,data.orders,user,api,handler); });
-  tradingAPI.setHandler('user.update', (method,data,symbol,option) => { updateOrder(method,data.orders,user,api,handler); });
+  const
+    userAPI=new coinbase.sockets.userApi(auth);
+    marketAPI=new coinbase.sockets.marketApi();
 
-  tradingAPI.socket._ws.on('authenticated', async () => {
+  userAPI.setHandler('user.snapshot', (method,data,symbol,option) => { updateOrder(method,data.orders,user,api,handler); });
+  userAPI.setHandler('user.update', (method,data,symbol,option) => { updateOrder(method,data.orders,user,api,handler); });
+
+  userAPI.socket._ws.on('authenticated', async () => {
     await tradingAPI.subscribeUser(['ETH-BTC','BTC-USDT']);
 
   });
 
-  tradingAPI.socket._ws.on('closed', async () => {
+  userAPI.socket._ws.on('closed', async () => {
     // do something, like clean-up and reconnect
   });
 
