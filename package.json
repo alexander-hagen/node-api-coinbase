@@ -1,6 +1,6 @@
 {
   "name": "node-api-coinbase",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Non-official implementation of Coinbase's Advanced Trade API's",
   "main": "index.js",
   "directories": {
