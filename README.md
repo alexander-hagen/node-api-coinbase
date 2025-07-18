@@ -122,12 +122,12 @@ For support on using the API's or development issues, please refer to the offici
 | API                     | DESCRIPTION |
 | :----                   | :---- |
 | getBest                 | https://docs.cdp.coinbase.com/api-reference/advanced-trade-api/rest-api/products/get-best-bid-ask |
-| getOrderBook            | Not implemented. Use public API instead                                                           |
-| listProducts            | Not implemented. Use public API instead                                                           |
+| getMarketTrades         | Not implemented. Use public API instead                                                           |
 | getProduct              | Not implemented. Use public API instead                                                           |
-| getCandles              | Not implemented. Use public API instead                                                           |
-| getTrades               | Not implemented. Use public API instead                                                           |
-
+| getProductBook          | Not implemented. Use public API instead                                                           |
+| getProductCandles       | Not implemented. Use public API instead                                                           |
+| getServerTime           | Not implemented. Use public API instead                                                           |
+| listProducts            | Not implemented. Use public API instead                                                           |
 
 ### API
 
@@ -167,17 +167,13 @@ For support on using the API's or development issues, please refer to the offici
 
 ```
 
-| API                                           | HANDLER                         | DESCRIPTION |
-| :----                                         | :----                           | :---- |
-| subscribeHeartbeats unsubscribeHeartbeats     | heartbeats                      | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#heartbeats-channel    |
-| subscribeCandles unsubscribeCandles           | candles.snapshot *.update       | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#candles-channel       |
-| subscribeStatus unsubscribeStatus             | status.snapshot *.update        | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#status-channel        |
-| subscribeTicker unsubscribeTicker             | ticker.snapshot *.update        | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#ticker-channel        |
-| subscribeTickerBatch unsubscribeTickerBatch   | ticker_batch.snapshot *.update  | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#ticker-batch-channel  |
-| subscribeLevel2 unsubscribeLevel2             | l2_data.snapshot *.update       | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#level2-channel        |
-| subscribeMarketTrades unsubscribeMarketTrades | market_trades.snapshot *.update | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#market-trades-channel |
-
 | API                                           | HANDLER                                   | DESCRIPTION |
 | :----                                         | :----                                     | :---- |
-| subscribeUser unsubscribeUser                 | user.snapshot*.update                     | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#user-channel                    |
+| subscribeHeartbeats unsubscribeHeartbeats     | heartbeats                                | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#heartbeats-channel    |
+| subscribeCandles unsubscribeCandles           | candles.snapshot *.update                 | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#candles-channel       |
+| subscribeStatus unsubscribeStatus             | status.snapshot *.update                  | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#ticker-channel        |
+| subscribeTickerBatch unsubscribeTickerBatch   | ticker_batch.snapshot *.update            | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#ticker-batch-channel  |
+| subscribeLevel2 unsubscribeLevel2             | l2_data.snapshot *.update                 | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#level2-channel        |
+| subscribeMarketTrades unsubscribeMarketTrades | market_trades.snapshot *.update           | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#market-trades-channel |
+| subscribeUser unsubscribeUser                 | user.snapshot *.update                    | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#user-channel                    |
 | subscribeFutures unsubscribeFutures           | futures_balance_summary.snapshot *.update | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#futures-balance-summary-channel |
