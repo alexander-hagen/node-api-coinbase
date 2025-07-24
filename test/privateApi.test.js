@@ -26,8 +26,8 @@ describe('Accounts', () => {
 
   test('Test listAccounts() function', async () => {
     const result=await privateAPI.listAccounts();
-    account=result[0];
-    expect(result).toBeInstanceOf(Array);
+    account=result.accounts[0];
+    expect(result).toHaveProperty("accounts");
   }, timeout);
 
   test('Test getAccount() function', async () => {
@@ -134,6 +134,11 @@ describe('Futures', () => {
 
 describe('Orders', () => {
 
+//  test('Test createOrder() function', async () => {
+//    const result=await privateAPI.createOrder();
+//    expect(result).toHaveProperty("success",true);
+//  }, timeout);
+
 //  test('Test cancelOrders() function', async () => {
 //    const result=await privateAPI.cancelOrders({ order_ids: [ ]});
 //    expect(result).toBeInstanceOf(Array);
@@ -141,11 +146,6 @@ describe('Orders', () => {
 
 //  test('Test closePosition() function', async () => {
 //    const result=await privateAPI.closePosition();
-//    expect(result).toHaveProperty("success",true);
-//  }, timeout);
-
-//  test('Test createOrder() function', async () => {
-//    const result=await privateAPI.createOrder();
 //    expect(result).toHaveProperty("success",true);
 //  }, timeout);
 
@@ -166,12 +166,12 @@ describe('Orders', () => {
 
   test('Test listFills() function', async () => {
     const result=await privateAPI.listFills();
-    expect(result).toBeInstanceOf(Array);
+    expect(result).toHaveProperty("fills");
   }, timeout);
 
   test('Test listOrders() function', async () => {
     const result=await privateAPI.listOrders();
-    expect(result).toBeInstanceOf(Array);
+    expect(result).toHaveProperty("orders");
   }, timeout);
 
 //  test('Test previewOrder() function', async () => {
