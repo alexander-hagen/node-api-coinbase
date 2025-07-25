@@ -167,6 +167,8 @@ For support on using the API's or development issues, please refer to the offici
 
 ```
 
+### Public WebSocket feeds
+
 | API                                           | HANDLER                                   | DESCRIPTION |
 | :----                                         | :----                                     | :---- |
 | subscribeHeartbeats unsubscribeHeartbeats     | heartbeats                                | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#heartbeats-channel    |
@@ -175,5 +177,10 @@ For support on using the API's or development issues, please refer to the offici
 | subscribeTickerBatch unsubscribeTickerBatch   | ticker_batch.snapshot *.update            | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#ticker-batch-channel  |
 | subscribeLevel2 unsubscribeLevel2             | l2_data.snapshot *.update                 | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#level2-channel        |
 | subscribeMarketTrades unsubscribeMarketTrades | market_trades.snapshot *.update           | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#market-trades-channel |
+
+### Private WebSocket feeds
+
+| API                                           | HANDLER                                   | DESCRIPTION |
+| :----                                         | :----                                     | :---- |
 | subscribeUser unsubscribeUser                 | user.snapshot *.update                    | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#user-channel                    |
 | subscribeFutures unsubscribeFutures           | futures_balance_summary.snapshot *.update | https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/websocket/websocket-channels#futures-balance-summary-channel |
