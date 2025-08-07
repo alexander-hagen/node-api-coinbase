@@ -1,6 +1,6 @@
 # node-api-coinbase
 
-![Statements](https://img.shields.io/badge/statements-64.8%25-red.svg?style=flat) ![Branches](https://img.shields.io/badge/branches-35.25%25-red.svg?style=flat) ![Functions](https://img.shields.io/badge/functions-61.29%25-red.svg?style=flat) ![Lines](https://img.shields.io/badge/lines-72.95%25-red.svg?style=flat)
+![Statements](https://img.shields.io/badge/statements-71.98%25-red.svg?style=flat) ![Branches](https://img.shields.io/badge/branches-43.22%25-red.svg?style=flat) ![Functions](https://img.shields.io/badge/functions-70%25-red.svg?style=flat) ![Lines](https://img.shields.io/badge/lines-79.81%25-red.svg?style=flat)
 
 Non-official implementation of Coinbase's Advanced Trade API's. Developed for personal use.
 

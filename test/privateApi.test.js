@@ -12,7 +12,7 @@ const
   timeout=privateAPI.timeout;
 
 const
-  symbol="BTC-USD";
+  symbol="BTC-USDC";
 //  quote="USDC",
 //  base="XXBT";
 //  limit=5,
@@ -134,34 +134,72 @@ describe('Futures', () => {
 
 describe('Orders', () => {
 
-//  test('Test createOrder() function', async () => {
-//    const result=await privateAPI.createOrder();
-//    expect(result).toHaveProperty("success",true);
-//  }, timeout);
+  var orderid;
 
-//  test('Test cancelOrders() function', async () => {
-//    const result=await privateAPI.cancelOrders({ order_ids: [ ]});
-//    expect(result).toBeInstanceOf(Array);
-//  }, timeout);
+  test('Test previewOrder() function', async () => {
+    const request={
+      product_id: symbol,
+      side: "BUY",
+      order_configuration: { limit_limit_gtc: {
+        base_size: "0.0001",
+        limit_price: "50000",
+        post_only: false }
+      }
+    };
+    const result=await privateAPI.previewOrder(request);
+    expect(result).toHaveProperty("commission_total");
+  }, timeout);
+
+  test('Test createOrder() function', async () => {
+    const request={
+      product_id: symbol,
+      client_order_id: Date.now().toString(),
+      side: "BUY",
+      order_configuration: { limit_limit_gtc: {
+        base_size: "0.0001",
+        limit_price: "50000",
+        post_only: false }
+      }
+    };
+    const result=await privateAPI.createOrder(request);
+    orderid=result.success_response.order_id;
+    expect(result).toHaveProperty("success",true);
+  }, timeout);
+
+  test('Test getOrder() function', async () => {
+    const result=await privateAPI.getOrder(orderid);
+    expect(result).toHaveProperty("order");
+  }, timeout);
+
+  test('Test editOrderPreview() function', async () => {
+    const request={
+      order_id: orderid,
+      size: "0.00005",
+      price: "60000"
+    };
+    const result=await privateAPI.editOrderPreview(request);
+    expect(result).toHaveProperty("commission_total");
+  }, timeout);
+
+  test('Test editOrder() function', async () => {
+    const request={
+      order_id: orderid,
+      size: "0.00005",
+      price: "60000"
+    };
+    const result=await privateAPI.editOrder(request);
+    expect(result).toHaveProperty("success",true);
+  }, timeout);
+
+  test('Test cancelOrders() function', async () => {
+    const request={ order_ids: [ orderid ] };
+    const result=await privateAPI.cancelOrders(request);
+    expect(result).toBeInstanceOf(Array);
+  }, timeout);
 
 //  test('Test closePosition() function', async () => {
 //    const result=await privateAPI.closePosition();
 //    expect(result).toHaveProperty("success",true);
-//  }, timeout);
-
-//  test('Test editOrder() function', async () => {
-//    const result=await privateAPI.editOrder();
-//    expect(result).toHaveProperty("success",true);
-//  }, timeout);
-
-//  test('Test editOrderPreview() function', async () => {
-//    const result=await privateAPI.editOrderPreview();
-//    expect(result).not.toHaveProperty("errors");
-//  }, timeout);
-
-//  test('Test getOrder() function', async () => {
-//    const result=await privateAPI.getOrder();
-//    expect(result).toHaveProperty("order_id");
 //  }, timeout);
 
   test('Test listFills() function', async () => {
@@ -173,11 +211,6 @@ describe('Orders', () => {
     const result=await privateAPI.listOrders();
     expect(result).toHaveProperty("orders");
   }, timeout);
-
-//  test('Test previewOrder() function', async () => {
-//    const result=await privateAPI.previewOrder();
-//    expect(result).toBe(true);
-//  }, timeout);
 
 });
 
