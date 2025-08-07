@@ -1,6 +1,6 @@
 {
   "name": "node-api-coinbase",
-  "version": "0.3.10",
+  "version": "0.3.11",
   "description": "Non-official implementation of Coinbase's Advanced Trade API's",
   "main": "index.js",
   "jest": {
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "jest --coverage --passWithNoTests --verbose",
-    "badges": "istanbul-badges-readme",
+    "badges": "istanbul-badges-readme --colors=red:50,yellow:80",
     "patch": "npm version patch --no-git-tag-version"
   },
   "repository": {
