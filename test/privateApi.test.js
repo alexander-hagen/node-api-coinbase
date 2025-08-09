@@ -279,16 +279,16 @@ describe('Portfolios', () => {
 //    expect(result).toBeEmpty();
 //  }, timeout);
 
-//  test('Test editPortfolio() function', async () => {
-//    const result=await privateAPI.editPortfolio(portfolio.uuid,{name: "profiel1"});
-//    expect(result).toHaveProperty("uuid");
-//  }, timeout);
-
   test('Test listPortfolios() function', async () => {
     const result=await privateAPI.listPortfolios({portfolio_type: "DEFAULT"});
     portfolio=result[0];
     expect(result).toBeInstanceOf(Array);
   }, timeout);
+
+//  test('Test editPortfolio() function', async () => {
+//    const result=await privateAPI.editPortfolio(portfolio.uuid,{name: "Default"});
+//    expect(result).toHaveProperty("uuid");
+//  }, timeout);
 
   test('Test getPortfolioBreakdown() function', async () => {
     const result=await privateAPI.getPortfolioBreakdown(portfolio.uuid);
