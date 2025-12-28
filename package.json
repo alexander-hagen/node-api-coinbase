@@ -20,7 +20,7 @@
     "url": "git+https://github.com/alexander-hagen/node-api-coinbase.git"
   },
   "keywords": [
-    "kraken",
+    "coinbase",
     "tradebots.nl"
   ],
   "author": "Alexander Hagen",
